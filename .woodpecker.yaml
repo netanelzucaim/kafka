@@ -21,7 +21,6 @@ steps:
     environment:
       PIP_CONFIG_FILE: PIP_CONFIG_FILE
     commands:
-      - apt-get install -y curl 
       - sleep 30
       - curl http://kafka-service:9092
       - pip install kafka-python
