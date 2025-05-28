@@ -17,10 +17,11 @@ services:
 
 steps: 
   - name: running cosumer
-    image: python:3.14.0b2-alpine3.21
+    image: python:3.9-slim
     environment:
       PIP_CONFIG_FILE: PIP_CONFIG_FILE
     commands:
+      - apt-get install -y curl 
       - sleep 30
       - curl http://kafka-service:9092
       - pip install kafka-python
