@@ -19,7 +19,7 @@ steps:
     environment:
       PIP_CONFIG_FILE: PIP_CONFIG_FILE
     commands:
-      - pip install -r kafka-consumer
+      - pip install kafka-consumer
       - echo "Running Kafka consumer"
       - python consumer.py
       - echo "Consumer finished"
