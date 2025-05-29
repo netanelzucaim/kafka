@@ -20,7 +20,7 @@ services:
       - 9092  # expose Kafka broker port to host
 
 steps: 
-  - name: running cosumer
+  - name: cosumer
     image: python-nati
     environment:
       PIP_CONFIG_FILE: PIP_CONFIG_FILE
@@ -44,8 +44,8 @@ steps:
       - echo "Kafka is ready. Starting consumer and producer."
       - pip install kafka-python
       - python consumer.py
-    depends_on: [kafka]
-  - name: running cosumer
+
+  - name: producer
     image: python-nati
     environment:
       PIP_CONFIG_FILE: PIP_CONFIG_FILE
@@ -69,4 +69,4 @@ steps:
       - echo "Kafka is ready. Starting consumer and producer."
       - pip install kafka-python
       - python producer.py 
-    depends_on: [kafka]
+    depends_on: [cosumer]
