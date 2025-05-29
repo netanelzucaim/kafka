@@ -66,4 +66,5 @@ steps:
                 "
       - echo "Kafka is ready. Starting consumer and producer."
       - pip install kafka-python
+      - sleep 30
       - python producer.py 
