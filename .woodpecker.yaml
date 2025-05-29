@@ -15,11 +15,9 @@ services:
       KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       ALLOW_PLAINTEXT_LISTENER: "yes"
       KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE: "true"
-
     ports:
       - 9092  # expose Kafka broker port to host
 
-steps: 
   - name: cosumer
     image: python-nati
     environment:
@@ -44,7 +42,7 @@ steps:
       - echo "Kafka is ready. Starting consumer and producer."
       - pip install kafka-python
       - python consumer.py
-
+steps: 
   - name: producer
     image: python-nati
     environment:
