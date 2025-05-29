@@ -40,5 +40,6 @@ steps:
             raise Exception('Kafka did not become ready in time')
                 "
       - echo "Kafka is ready. Starting consumer and producer."
+      - pip install kafka-python
       - python producer.py &
       - python consumer.py
