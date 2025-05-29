@@ -67,4 +67,3 @@ steps:
       - echo "Kafka is ready. Starting consumer and producer."
       - pip install kafka-python
       - python producer.py 
-    depends_on: [cosumer]
