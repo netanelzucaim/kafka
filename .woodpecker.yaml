@@ -5,7 +5,7 @@ services:
   - name: kafka
     image: bitnami/kafka:latest
     environment: 
-      KAFKA_KRAFT_CLUSTER_ID: kraft-cluster-1
+      KAFKA_KRAFT_CLUSTER_ID: pYmaVpNCTg2Bz00Ailjd4Q
       KAFKA_CFG_NODE_ID: 1
       KAFKA_CFG_PROCESS_ROLES: controller,broker
       KAFKA_CFG_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
