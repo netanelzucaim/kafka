@@ -10,13 +10,13 @@ consumer = KafkaConsumer(
     enable_auto_commit=True
 )
 
-print("Waiting for messages...")
+print("Waiting for messages...", flush=True)
 count = 0
 for message in consumer:
-    print(f"Received: {message.value.decode()}")
+    print(f"Received: {message.value.decode()}", flush=True)
     count += 1
     if count >= 5:
         break
 
 consumer.close()
-print("Consumer finished.")
+print("Consumer finished.", flush=True)
