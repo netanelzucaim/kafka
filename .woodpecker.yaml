@@ -54,7 +54,7 @@ steps:
       PIP_CONFIG_FILE: PIP_CONFIG_FILE
     commands:
       - pip install kafka-python
-      # - sleep 30
+      - sleep 30
       - python producer.py 
       # - python both.py
     depends_on: [wait_for_kafka]

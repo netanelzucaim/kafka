@@ -6,23 +6,23 @@ import time
 TOPIC = "test-topic"
 BOOTSTRAP_SERVERS = "kafka:9092"
 
-# Wait for the topic to exist
-admin_client = KafkaAdminClient(bootstrap_servers=BOOTSTRAP_SERVERS)
+# # Wait for the topic to exist
+# admin_client = KafkaAdminClient(bootstrap_servers=BOOTSTRAP_SERVERS)
 
-print("Waiting for topic to exist...")
-for _ in range(20):
-    try:
-        topics = admin_client.list_topics()
-        if TOPIC in topics:
-            print(f"Topic {TOPIC} found.")
-            break
-    except KafkaError as e:
-        print("Error fetching topic list:", e)
-    time.sleep(2)
-else:
-    raise Exception(f"Timeout: Topic {TOPIC} not found.")
+# print("Waiting for topic to exist...")
+# for _ in range(20):
+#     try:
+#         topics = admin_client.list_topics()
+#         if TOPIC in topics:
+#             print(f"Topic {TOPIC} found.")
+#             break
+#     except KafkaError as e:
+#         print("Error fetching topic list:", e)
+#     time.sleep(2)
+# else:
+#     raise Exception(f"Timeout: Topic {TOPIC} not found.")
 
-admin_client.close()
+# admin_client.close()
 
 # Proceed to produce
 producer = KafkaProducer(bootstrap_servers=BOOTSTRAP_SERVERS)
