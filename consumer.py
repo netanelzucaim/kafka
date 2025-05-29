@@ -20,3 +20,4 @@ for message in consumer:
 
 consumer.close()
 print("Consumer finished.", flush=True)
+
