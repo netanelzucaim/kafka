@@ -15,10 +15,6 @@ It spins up a Kafka broker, runs a consumer that waits for messages on a topic, 
 
 ---
 
-## 📁 Project Structure
-
----
-
 ## 🧪 How It Works
 
 1. Kafka runs as a service inside Woodpecker using Bitnami’s Kafka image (KRaft mode, no ZooKeeper).
