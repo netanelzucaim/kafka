@@ -1,5 +1,7 @@
 from kafka import KafkaConsumer
 
+print("Starting consumer script...", flush=True)
+
 consumer = KafkaConsumer(
     'test-topic',
     bootstrap_servers='kafka:9092',
@@ -8,6 +10,6 @@ consumer = KafkaConsumer(
     enable_auto_commit=True
 )
 
-print("Waiting for messages...")
+print("Waiting for messages...", flush=True)
 for message in consumer:
     print(f"Received: {message.value.decode()}")
