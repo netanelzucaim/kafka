@@ -39,6 +39,6 @@ steps:
         else:
             raise Exception('Kafka did not become ready in time')
                 "
-              - echo "Kafka is ready. Starting consumer and producer."
-              - python producer.py &
-              - python consumer.py
+      - echo "Kafka is ready. Starting consumer and producer."
+      - python producer.py &
+      - python consumer.py
