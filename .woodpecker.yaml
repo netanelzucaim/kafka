@@ -22,6 +22,8 @@ steps:
     image: python-nati
     environment:
       PIP_CONFIG_FILE: PIP_CONFIG_FILE
+      KAFKA_BROKER: kafka:9092
+
     commands:
       - sleep 30
       - curl http://kafka:9092
