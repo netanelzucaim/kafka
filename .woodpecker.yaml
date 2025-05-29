@@ -2,7 +2,7 @@ when:
   - event: [push, manual, tag]
 
 services: 
-  - name: kafka
+  - name: kafka3
     image: bitnami/kafka:latest
     environment: 
       KAFKA_KRAFT_CLUSTER_ID: pYmaVpNCTg2Bz00Ailjd4Q
@@ -17,8 +17,6 @@ services:
       KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE: "true"
     ports:
       - 9092  # expose Kafka broker port to host
-
-
 steps: 
   - name: wait_for_kafka
     image: python-nati
