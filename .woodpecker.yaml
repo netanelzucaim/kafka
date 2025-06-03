@@ -44,8 +44,10 @@ steps:
     environment:
       PIP_CONFIG_FILE: PIP_CONFIG_FILE
     commands:
-      - pip install kafka-python
-      - python consumer.py
+      - pip install kafka-python confluent-kafka
+      # - python consumer.py
+      - python consumer_confluent.py
+
     depends_on: [wait_for_kafka]
 
   - name: producer
@@ -53,8 +55,10 @@ steps:
     environment:
       PIP_CONFIG_FILE: PIP_CONFIG_FILE
     commands:
-      - pip install kafka-python
+      - pip install kafka-python confluent-kafka
       - sleep 30
-      - python producer.py 
+      # - python producer.py 
       # - python both.py
+      - python producer_confluent.py
+
     depends_on: [wait_for_kafka]
